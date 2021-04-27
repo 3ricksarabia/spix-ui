@@ -1,6 +1,11 @@
 import React, { FC, ElementType } from "react";
-import { IButtonProps } from "./ButtonProps";
 import { Solid, Outline, Ghost, Link } from "./ButtonStyled";
+
+export interface IButtonProps {
+    label: string;
+    size?: "xs" | "sm" | "md" | "lg";
+    variant?: "solid" | "outline" | "ghost" | "link";
+}
 
 interface IButtonVariants {
     solid: ElementType;
@@ -9,7 +14,7 @@ interface IButtonVariants {
     link: ElementType;
 }
 
-export const Button: FC<IButtonProps> = ({ label, size, variant = "solid" }: IButtonProps) => {
+const Button: FC<IButtonProps> = ({ label, size, variant = "solid" }: IButtonProps) => {
     const VARIANTS: IButtonVariants = {
         solid: Solid,
         outline: Outline,
@@ -25,3 +30,5 @@ export const Button: FC<IButtonProps> = ({ label, size, variant = "solid" }: IBu
         </Button>
     );
 };
+
+export default Button;

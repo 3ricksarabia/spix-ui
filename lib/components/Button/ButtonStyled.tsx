@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IButtonProps } from "./ButtonProps";
+import { IButtonProps } from "./Button";
 
 const ButtonStyled = styled.button<IButtonProps>`
     cursor: pointer;
