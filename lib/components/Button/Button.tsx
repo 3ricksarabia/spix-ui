@@ -14,7 +14,7 @@ interface IButtonVariants {
     link: ElementType;
 }
 
-const Button: FC<IButtonProps> = ({ label, size, variant = "solid" }: IButtonProps) => {
+const Button: FC<IButtonProps> = ({ label, size, variant = "solid" }) => {
     const VARIANTS: IButtonVariants = {
         solid: Solid,
         outline: Outline,
