@@ -1,5 +1,5 @@
 {
-    "name": "@ericksarabia/storybook-design-system",
+    "name": "@ericksarabia/spix-ui",
     "author": "Erick Sarabia <erick.sarabia@outlook.com>",
     "version": "0.0.1",
     "main": "dist/index.js",
@@ -43,6 +43,6 @@
         "styled-components": "^5.2.3"
     },
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/@ericksarabia"
+        "registry": "https://npm.pkg.github.com/"
     }
 }
