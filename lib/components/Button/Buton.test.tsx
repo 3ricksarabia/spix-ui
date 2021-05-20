@@ -11,7 +11,7 @@ describe("<Button />", () => {
                 <Button label="button" />
             </ThemeProvider>,
         );
-        const BUTTON = screen.getByText("");
+        const BUTTON = screen.getByText("button");
         expect(BUTTON).toBeInTheDocument;
     });
 });
