@@ -6,13 +6,9 @@
         "prettier/@typescript-eslint",
         "plugin:prettier/recommended"
     ],
-    "rules": {
-        // Aca puedes modificar alguna regla específica, por ejemplo:
-        // "@typescript-eslint/explicit-function-return-type": "off",
-    },
     "settings": {
         "react": {
-            "version": "detect" // para detectar la versión de reactjs
+            "version": "detect"
         }
     }
 }
