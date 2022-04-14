@@ -1,0 +1,27 @@
+version: v1.0
+name: Continuous integration
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+
+blocks:
+  - name: CI
+    task:
+      jobs:
+        - name: "\U0001F69A  Install dependencies + \U0001FA7A Test"
+          commands:
+            - checkout
+            - sem-version node 16
+            - npm install
+            - npm test
+
+promotions:
+  - name: Production release
+    pipeline_file: release.yml
+    auto_promote:
+      when: "result = 'passed' and branch = 'master'"
+  - name: Beta release
+    pipeline_file: release.yml
+    auto_promote:
+      when: "result = 'passed' and branch = 'beta'"
