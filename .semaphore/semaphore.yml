@@ -4,6 +4,7 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu2004
+
 blocks:
   - name: CI
     task:
@@ -14,9 +15,13 @@ blocks:
             - sem-version node 16
             - npm install
             - npm test
-  - name: 'Block #2'
-    task:
-      jobs:
-        - name: 'Job #1'
-          commands:
-            - yarn install
+
+promotions:
+  - name: Production release
+    pipeline_file: release.yml
+    auto_promote:
+      when: "result = 'passed' and branch = 'master'"
+  - name: Beta release
+    pipeline_file: release.yml
+    auto_promote:
+      when: "result = 'passed' and branch = 'beta'"
