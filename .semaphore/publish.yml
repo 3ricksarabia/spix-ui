@@ -1,16 +1,14 @@
 version: v1.0
 name: Create Node.js Package
-
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu2004
-
 blocks:
   - name: CI
     task:
       jobs:
-        - name: '🚚  Install dependencies + 🩺 Test + 🔨 Build + 📦 Publish'
+        - name: "\U0001F69A  Install dependencies + \U0001FA7A Test + \U0001F528 Build + \U0001F4E6 Publish"
           commands:
             - checkout
             - sem-version node 16
