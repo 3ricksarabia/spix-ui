@@ -12,9 +12,9 @@ blocks:
         - name: Test
           commands:
             - checkout
-            - sem-version node 12
+            - sem-version node 14
             - cache restore
             - npm install
-            - cache store
-            - npm run build --if-present
             - npm test
+            - npm run build
+            - npm publish
