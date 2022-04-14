@@ -1,5 +1,6 @@
 version: v1.0
 name: Test MyApp
+
 agent:
   machine:
     type: e1-standard-2
@@ -18,3 +19,5 @@ blocks:
             - npm test
             - npm run build
             - npm publish
+      secrets:
+        - name: NPM  
