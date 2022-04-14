@@ -1,1 +1,1 @@
-# spix-ui
+# Spix UI
